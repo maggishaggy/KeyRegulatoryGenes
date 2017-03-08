@@ -64,7 +64,7 @@ def MCDS_direct(component, str, out):
     p.add_constraint(sum([c[Set(e)] for e in g.edges(labels = False)]) == sum([b[u] for u in g.vertices()])-1)
     
     #print "add constraints for edges"
-    #invalid equality
+    #valid inequality
     for e in g.edges(labels = False):
         for v in Set(e):
             #p.add_constraint(c[Set(e)] <= b[u])
